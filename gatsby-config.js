@@ -1,14 +1,38 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Equilibrio - Agencia de Marketing Digital en Querétaro',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Somos una Agencia de Marketing Digital en Querétaro especializada en manejo de redes sociales, diseño web optimizado para buscadores y creación de identidad gráfica.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
+			resolve: `gatsby-plugin-prefetch-google-fonts`,
+			options: {
+			  fonts: [
+				{
+				  family: `Nunito Sans`,
+				  variants: [`300`, `400`, `700`, `800`]
+				},
+				{
+				  family: `Nunito Sans`,
+				  subsets: [`latin`]
+				},
+				{
+				  family: `PT Sans`,
+				  variants: [`300`, `400`, `700`, `800`]
+				},
+				{
+				  family: `PT Sans`,
+				  subsets: [`latin`]
+				},
+			  ],
+			},
+		},
+    
       // keep as first gatsby-source-filesystem plugin for gatsby image support
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,

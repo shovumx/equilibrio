@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import '../components/all.sass'
 
 export const IndexPageTemplate = ({
   image,
@@ -72,10 +72,19 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h1 className="title magical">{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                    <h3 
+                    className="has-text-weight-light magical"
+                    style={{
+
+                      lineHeight: '1.3',
+                      padding: '0.25em',
+                    }}
+                    >
+                      {mainpitch.description}
+                    </h3>
                   </div>
                 </div>
                 <div className="columns">
